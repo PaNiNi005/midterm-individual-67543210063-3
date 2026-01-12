@@ -30,7 +30,6 @@ midterm-individual-6531503001/
 ├── README.md
 └── ARCHITECTURE.md
 
----
 
 # 🎯 Refactoring Summary
 
@@ -225,3 +224,4 @@ yaml
 
 
 ---
+
