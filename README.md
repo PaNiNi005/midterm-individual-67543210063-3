@@ -12,22 +12,8 @@
 3. **Data Access Layer** – Repositories & Database connection, SQL operations  
 
 ## 📂 Project Structure
-midterm-individual-6531503001/
-├── src/
-│ ├── presentation/
-│ │ ├── controllers/
-│ │ ├── routes/
-│ │ └── middlewares/
-│ ├── business/
-│ │ ├── services/
-│ │ └── validators/
-│ └── data/
-│ ├── repositories/
-│ └── database/
-├── server.js
-├── library.db
-├── README.md
-└── ARCHITECTURE.md
+<img width="681" height="650" alt="image" src="https://github.com/user-attachments/assets/4b1a7ee8-078c-4225-b387-f1f5d9931c5c" />
+
 
 pgsql
 คัดลอกโค้ด
@@ -219,3 +205,4 @@ json
 {
   "message": "Book deleted successfully"
 }
+
