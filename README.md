@@ -53,6 +53,7 @@ npm start
 📝 API Endpoints
 
 1️⃣ 🔹 GET - ดึงหนังสือทั้งหมด
+
 Method: GET
 
 URL: http://localhost:3000/api/books
@@ -66,139 +67,87 @@ URL: http://localhost:3000/api/books
 
 
 
-2️⃣ GET /api/books/:id
-Description: ดึงหนังสือเล่มเดียวตาม id
+2️⃣ 🔹 POST - เพิ่มหนังสือใหม่
 
-Example Request:
+Method: POST
 
-http
-คัดลอกโค้ด
-GET http://localhost:3000/api/books/1
-Example Response:
+URL: http://localhost:3000/api/books
 
-json
-คัดลอกโค้ด
+ไปที่ Body → raw → JSON
+
+ใส่ข้อมูลตัวอย่าง:
+
 {
-  "id": 1,
-  "title": "Harry Potter",
-  "author": "J.K. Rowling",
-  "isbn": "9780747532743",
-  "status": "available",
-  "created_at": "2026-01-12 03:12:47"
-}
-3️⃣ POST /api/books
-Description: เพิ่มหนังสือใหม่
-
-Body (JSON):
-
-json
-คัดลอกโค้ด
-{
-  "title": "New Book Title",
-  "author": "Author Name",
-  "isbn": "978XXXXXXXXX"
-}
-Example Response:
-
-json
-คัดลอกโค้ด
-{
-  "id": 2,
-  "title": "New Book Title",
-  "author": "Author Name",
-  "isbn": "978XXXXXXXXX",
-  "status": "available",
-  "created_at": "2026-01-12 10:10:00"
-}
-4️⃣ PUT /api/books/:id
-Description: อัพเดทข้อมูลหนังสือ
-
-Body (JSON):
-
-json
-คัดลอกโค้ด
-{
-  "title": "Updated Book Title",
-  "author": "Updated Author",
-  "isbn": "978XXXXXXXXX"
-}
-Example Response:
-
-json
-คัดลอกโค้ด
-{
-  "id": 2,
-  "title": "Updated Book Title",
-  "author": "Updated Author",
-  "isbn": "978XXXXXXXXX",
-  "status": "available",
-  "created_at": "2026-01-12 10:10:00"
-}
-5️⃣ PATCH /api/books/:id/borrow
-Description: ยืมหนังสือ (status → borrowed)
-
-Example Request:
-
-http
-คัดลอกโค้ด
-PATCH http://localhost:3000/api/books/2/borrow
-Example Response:
-
-json
-คัดลอกโค้ด
-{
-  "id": 2,
-  "title": "Updated Book Title",
-  "author": "Updated Author",
-  "isbn": "978XXXXXXXXX",
-  "status": "borrowed",
-  "created_at": "2026-01-12 10:10:00"
-}
-6️⃣ PATCH /api/books/:id/return
-Description: คืนหนังสือ (status → available)
-
-Example Request:
-
-http
-คัดลอกโค้ด
-PATCH http://localhost:3000/api/books/2/return
-Example Response:
-
-json
-คัดลอกโค้ด
-{
-  "id": 2,
-  "title": "Updated Book Title",
-  "author": "Updated Author",
-  "isbn": "978XXXXXXXXX",
-  "status": "available",
-  "created_at": "2026-01-12 10:10:00"
-}
-7️⃣ DELETE /api/books/:id
-Description: ลบหนังสือ (ถ้า status ≠ borrowed)
-
-Example Request:
-
-http
-คัดลอกโค้ด
-DELETE http://localhost:3000/api/books/2
-Example Response:
-
-json
-คัดลอกโค้ด
-{
-  "message": "Book deleted successfully"
+    "title": "Harry Potter",
+    "author": "J.K. Rowling",
+    "isbn": "9780747532743"
 }
 
 
+กด Send
+
+ถ้าเพิ่มสำเร็จ จะได้ JSON ของหนังสือที่ถูกเพิ่ม
+
+<img width="796" height="295" alt="image" src="https://github.com/user-attachments/assets/2b1794fa-961b-41c8-b09d-0a9f3c07b2cd" />
 
 
+3️⃣ 🔹 PATCH - ยืมหนังสือ
+
+Method: PATCH
+
+URL: http://localhost:3000/api/books/1/borrow
+(1 = id ของหนังสือที่ต้องการยืม)
+
+กด Send
+
+หนังสือ status จะเปลี่ยนเป็น "borrowed"
+
+<img width="784" height="278" alt="image" src="https://github.com/user-attachments/assets/c8f27ea8-0745-41e5-ad46-60c5dc0a94c1" />
 
 
+4️⃣ 🔹 PATCH - คืนหนังสือ
+
+Method: PATCH
+
+URL: http://localhost:3000/api/books/1/return
+
+กด Send
+
+หนังสือ status จะเปลี่ยนเป็น "available"
+
+<img width="787" height="290" alt="image" src="https://github.com/user-attachments/assets/55b47dea-6c5c-425a-9e7b-569c18e853b3" />
 
 
+5️⃣ 🔹 PUT - แก้ไขหนังสือ
+
+Method: PUT
+
+URL: http://localhost:3000/api/books/1
+
+Body → raw → JSON
+
+{
+    "title": "Harry Potter and the Sorcerer's Stone",
+    "author": "J.K. Rowling",
+    "isbn": "9780747532743"
+}
 
 
+กด Send
+
+จะได้ JSON ของหนังสือที่อัปเดตแล้ว
+
+<img width="785" height="295" alt="image" src="https://github.com/user-attachments/assets/ddb3d63f-a404-4aaa-8345-7f20881841d7" />
 
 
+6️⃣ 🔹 DELETE - ลบหนังสือ
 
+Method: DELETE
+
+URL: http://localhost:3000/api/books/1
+
+กด Send
+
+ถ้าลบสำเร็จ จะได้ข้อความ { "message": "Book deleted successfully" }
+
+<img width="786" height="185" alt="image" src="https://github.com/user-attachments/assets/4a03d9b3-aede-4c5d-8d0d-6ec3344d3bbd" />
