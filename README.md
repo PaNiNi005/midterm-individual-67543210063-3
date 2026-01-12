@@ -37,13 +37,13 @@
 - เตรียมพร้อมต่อการขยายระบบในอนาคต  
 
 ## 🚀 How to Run
-# 1. Clone repository
-git clone [your-repo-url]
+### 1. Clone repository
+git clone https://github.com/PaNiNi005/midterm-individual-67543210063-3/tree/main
 
-# 2. Install dependencies
+### 2. Install dependencies
 npm install
 
-# 3. Run server
+### 3. Run server
 npm start
 
 # 4. Test API
@@ -203,6 +203,7 @@ json
 {
   "message": "Book deleted successfully"
 }
+
 
 
 
