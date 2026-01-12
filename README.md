@@ -47,8 +47,6 @@ npm install
 npm start
 
 # 4. Test API
-## Open browser: http://localhost:3000/api/books
-
 
 📝 API Endpoints
 
@@ -151,3 +149,4 @@ URL: http://localhost:3000/api/books/1
 ถ้าลบสำเร็จ จะได้ข้อความ { "message": "Book deleted successfully" }
 
 <img width="786" height="185" alt="image" src="https://github.com/user-attachments/assets/4a03d9b3-aede-4c5d-8d0d-6ec3344d3bbd" />
+
