@@ -1,15 +1,22 @@
-# Library Management System - Layered Architecture
+# 📚 Library Management System - Layered Architecture
+
+---
 
 ## 📋 Project Information
 - **Student Name:** รัฐจิกาลณ์ กวงคำ  
 - **Student ID:** 67543210063-3  
 - **Course:** ENGSE207 Software Architecture  
 
+---
+
 ## 🏗️ Architecture Style
-**Layered Architecture (3-tier)**  
+**Layered Architecture (3-tier)**
+
 1. **Presentation Layer** – Routes & Controllers, HTTP handling  
 2. **Business Logic Layer** – Services & Validators, business rules  
 3. **Data Access Layer** – Repositories & Database connection, SQL operations  
+
+---
 
 ## 📂 Project Structure
 ```text
@@ -29,30 +36,37 @@ midterm-individual-6531503001/
 ├── library.db
 ├── README.md
 └── ARCHITECTURE.md
+🎯 Refactoring Summary
+⚠️ ปัญหาของ Monolithic (เดิม)
+โค้ดปนกันหมด (HTTP, Business logic, Database) → อ่านยาก แก้ไขยาก
 
+ไฟล์เดียวใหญ่กว่า 400+ บรรทัด → Maintain ยาก
 
-## 🎯 Refactoring Summary
+ทีมงานแก้ conflict บ่อย เพราะทุกคนแก้ไฟล์เดียวกัน
 
-### ปัญหาของ Monolithic (เดิม)
-- โค้ดปนกันหมด (HTTP, Business logic, Database) → อ่านยาก แก้ไขยาก  
-- ไฟล์เดียวใหญ่กว่า 400+ บรรทัด → maintain ยาก  
-- ทีมงานแก้ conflict บ่อย เพราะทุกคนแก้ไฟล์เดียวกัน  
-- ไม่มี separation of concerns → เพิ่มโอกาสเกิดข้อผิดพลาด  
+ไม่มี separation of concerns → เพิ่มโอกาสเกิดข้อผิดพลาด
 
-### วิธีแก้ไขด้วย Layered Architecture
-- แยก HTTP handling เป็น **Presentation Layer**  
-- แยก Business rules + Validation เป็น **Business Layer**  
-- แยก Database operations เป็น **Data Layer**  
-- ทำให้ maintainable, scalable และทีมสามารถทำงานแยกกันได้  
+💡 วิธีแก้ไขด้วย Layered Architecture
+แยก HTTP handling เป็น Presentation Layer
 
-### ประโยชน์ที่ได้รับ
-- รัน API ได้ครบโดยไม่ชนกัน  
-- ลด conflict เวลาทีมแก้ไข  
-- เพิ่ม readability & maintainability  
-- เตรียมพร้อมต่อการขยายระบบในอนาคต  
+แยก Business rules + Validation เป็น Business Layer
 
-## 🚀 How to Run
-```bash
+แยก Database operations เป็น Data Layer
+
+ทำให้ maintainable, scalable และทีมสามารถทำงานแยกกันได้
+
+✅ ประโยชน์ที่ได้รับ
+รัน API ได้ครบโดยไม่ชนกัน
+
+ลด conflict เวลาทีมแก้ไข
+
+เพิ่ม readability & maintainability
+
+เตรียมพร้อมต่อการขยายระบบในอนาคต
+
+🚀 How to Run
+bash
+คัดลอกโค้ด
 # 1. Clone repository
 git clone [your-repo-url]
 
@@ -67,6 +81,7 @@ npm start
 📝 API Endpoints
 1️⃣ GET /api/books
 Description: ดึงรายการหนังสือทั้งหมด
+
 Query params (optional): status=available|borrowed
 
 Example Request:
@@ -218,8 +233,3 @@ json
 {
   "message": "Book deleted successfully"
 }
-yaml
-คัดลอกโค้ด
-
----
-
