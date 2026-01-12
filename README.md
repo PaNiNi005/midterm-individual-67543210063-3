@@ -48,6 +48,7 @@ npm install
 npm start
 
 # 4. Test API
+```bash
 # Open browser or Postman: http://localhost:3000/api/books
 📝 API Endpoints
 1️⃣ GET /api/books
@@ -203,5 +204,6 @@ json
 {
   "message": "Book deleted successfully"
 }
+
 
 
