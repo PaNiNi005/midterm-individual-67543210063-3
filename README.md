@@ -15,8 +15,6 @@
 <img width="681" height="650" alt="image" src="https://github.com/user-attachments/assets/4b1a7ee8-078c-4225-b387-f1f5d9931c5c" />
 
 
-pgsql
-คัดลอกโค้ด
 
 ## 🎯 Refactoring Summary
 
@@ -39,7 +37,7 @@ pgsql
 - เตรียมพร้อมต่อการขยายระบบในอนาคต  
 
 ## 🚀 How to Run
-```bash
+
 # 1. Clone repository
 git clone [your-repo-url]
 
@@ -205,4 +203,5 @@ json
 {
   "message": "Book deleted successfully"
 }
+
 
