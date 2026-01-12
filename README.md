@@ -47,39 +47,20 @@ npm install
 npm start
 
 # 4. Test API
-```bash
 # Open browser or Postman: http://localhost:3000/api/books
+
 📝 API Endpoints
-1️⃣ GET /api/books
-Description: ดึงรายการหนังสือทั้งหมด
-Query params (optional): status=available|borrowed
 
-Example Request:
+1️⃣ 🔹 GET - ดึงหนังสือทั้งหมด
+Method: GET
+URL: http://localhost:3000/api/books
+กด Send
+ถ้ามีหนังสืออยู่ใน DB จะขึ้น JSON list ของหนังสือ
+<img width="824" height="276" alt="image" src="https://github.com/user-attachments/assets/45ed9b77-7a42-4c08-8a28-886d433cc1f2" />
 
-http
-คัดลอกโค้ด
-GET http://localhost:3000/api/books?status=available
-Example Response:
 
-json
-คัดลอกโค้ด
-{
-  "books": [
-    {
-      "id": 1,
-      "title": "Harry Potter",
-      "author": "J.K. Rowling",
-      "isbn": "9780747532743",
-      "status": "available",
-      "created_at": "2026-01-12 03:12:47"
-    }
-  ],
-  "statistics": {
-    "available": 1,
-    "borrowed": 0,
-    "total": 1
-  }
-}
+
+
 2️⃣ GET /api/books/:id
 Description: ดึงหนังสือเล่มเดียวตาม id
 
@@ -203,6 +184,7 @@ json
 {
   "message": "Book deleted successfully"
 }
+
 
 
 
