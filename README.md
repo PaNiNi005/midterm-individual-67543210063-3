@@ -54,9 +54,13 @@ npm start
 
 1️⃣ 🔹 GET - ดึงหนังสือทั้งหมด
 Method: GET
+
 URL: http://localhost:3000/api/books
+
 กด Send
+
 ถ้ามีหนังสืออยู่ใน DB จะขึ้น JSON list ของหนังสือ
+
 <img width="824" height="276" alt="image" src="https://github.com/user-attachments/assets/45ed9b77-7a42-4c08-8a28-886d433cc1f2" />
 
 
@@ -185,6 +189,7 @@ json
 {
   "message": "Book deleted successfully"
 }
+
 
 
 
