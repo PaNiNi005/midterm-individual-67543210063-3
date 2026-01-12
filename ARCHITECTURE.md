@@ -55,7 +55,7 @@
 User → Routes → Controller → Service → Repository → Database
 ← Response กลับตามลำดับ
 
-คัดลอกโค้ด
+---
 
 
 
