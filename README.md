@@ -12,25 +12,24 @@
 3. **Data Access Layer** – Repositories & Database connection, SQL operations  
 
 ## 📂 Project Structure
+```text
 midterm-individual-6531503001/
 ├── src/
-│ ├── presentation/
-│ │ ├── controllers/
-│ │ ├── routes/
-│ │ └── middlewares/
-│ ├── business/
-│ │ ├── services/
-│ │ └── validators/
-│ └── data/
-│ ├── repositories/
-│ └── database/
+│   ├── presentation/
+│   │   ├── controllers/
+│   │   ├── routes/
+│   │   └── middlewares/
+│   ├── business/
+│   │   ├── services/
+│   │   └── validators/
+│   └── data/
+│       ├── repositories/
+│       └── database/
 ├── server.js
 ├── library.db
 ├── README.md
 └── ARCHITECTURE.md
 
-pgsql
-คัดลอกโค้ด
 
 ## 🎯 Refactoring Summary
 
@@ -223,3 +222,4 @@ yaml
 คัดลอกโค้ด
 
 ---
+
