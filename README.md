@@ -30,6 +30,8 @@ midterm-individual-6531503001/
 ├── README.md
 └── ARCHITECTURE.md
 
+---
+
 # 🎯 Refactoring Summary
 
 ## ปัญหาของ Monolithic (เดิม)
@@ -220,5 +222,6 @@ json
 }
 yaml
 คัดลอกโค้ด
+
 
 ---
