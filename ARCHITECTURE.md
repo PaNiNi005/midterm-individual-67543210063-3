@@ -12,36 +12,7 @@
 ---
 
 ## C2: Container Diagram
-┌─────────────────────────────────────┐
-│        Presentation Layer           │
-│  ┌───────────────────────────────┐ │
-│  │ Routes → Controllers          │ │
-│  │ (HTTP Handling)               │ │
-│  └───────────────────────────────┘ │
-└───────────────┬────────────────────┘
-                │
-                ▼
-┌─────────────────────────────────────┐
-│        Business Logic Layer         │
-│  ┌───────────────────────────────┐ │
-│  │ Services → Validators         │ │
-│  │ (Business Rules)              │ │
-│  └───────────────────────────────┘ │
-└───────────────┬────────────────────┘
-                │
-                ▼
-┌─────────────────────────────────────┐
-│         Data Access Layer           │
-│  ┌───────────────────────────────┐ │
-│  │ Repositories → Database       │ │
-│  │ (SQL Queries)                 │ │
-│  └───────────────────────────────┘ │
-└───────────────┬────────────────────┘
-                │
-                ▼
-           ┌──────────┐
-           │  SQLite  │
-           └──────────┘
+<img width="268" height="609" alt="image" src="https://github.com/user-attachments/assets/6dda480c-dc33-4adf-9179-938a7d6e0f46" />
 
 ---
 
@@ -85,5 +56,6 @@ User → Routes → Controller → Service → Repository → Database
 ← Response กลับตามลำดับ
 
 คัดลอกโค้ด
+
 
 
